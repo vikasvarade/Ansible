@@ -1,0 +1,22 @@
+Ansible Installation
+
+1. Create a new file called 'ansible.repo' in
+cd /etc/yum.repos.d
+vi ansible.repo
+
+
+2. Copy the following content into it:
+[Ansible]
+name = ansible
+baseurl = https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/
+enabled = 1
+gpgcheck = 0
+
+
+3. Run 'yum update'
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum -y install ansible
+ansible --version
+
+
+
